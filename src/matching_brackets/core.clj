@@ -6,14 +6,14 @@
   [& args]
   (println "Hello, World!"))
 ;;/////////////////////////////////
-(def string "[\"My Application\" \n \"This map has different keys like : \" \n [{:price 100 :side :sell}{:price 123 :side :buy}]\n \"Has a state\" \n :balance \n \"You can cancel the orders at any time\"  \n \"in form of a map : \" \n :profit \n \"!!!!\"\n {:balance 123000 \n  :profit 500 \n  :orders [{:price 100 :side :sell}\n           {:price 123 :side :buy}]} \n ]")
+(def string "(defn send-image-to-contact! [client contact image]\n  (go\n    (.sendFile client\n               (async/<! (find-contacts! client contact))\n               (async/<! image)\n               \"hellooo.jpeg\"\n               \"test bot\")))\n\u200B\n(defn send-image-to-contacts! [client contact-list image]\n  (go (let [c (async/chan)]\n        (loop []\n          (if-let [contact (async/>! c contact-list)]\n            (do (async/>! c (send-image-to-contact! client contact image))\n                (recur))\n            (async/close! c))))))\n\u200B\n(defn main []\n  (go (let [client   (<p! (wa/create))\n            image    (place-text-on-image! pic-gen-url)\n            contacts [\"person1\"\n                      \"person2\"\n                      \"person3\"]]\n        (prn \"begin\")\n        #_(send-image-to-contacts! client contacts image)\n        (send-image-to-contact! client \"person1\" image)\n        (prn \"finished\"))))\n")
 (def strCount (count string))
 ; (println string)
 ;;////////////////////////////////
 (defn processString []                                      ;;turns any string to a string of just brackets
   (loop [i 0 pString ""]
     (if (> i (dec strCount))
-      pString
+      pString                                               ;;reduce
       (case (nth string i)
         \( (recur (inc i) (str pString \())
         \) (recur (inc i) (str pString \)))
@@ -26,14 +26,13 @@
 ;;////////////////////////////////
 (defn stack [one two]                                       ;;Stacks 3 types of opening-closing brackets
   (let [lastOne (last one)]
-    (if (and (= lastOne \() (= two \)))
+    (if (or (and (= lastOne \() (= two \)))
+            (and (= lastOne \[) (= two \]))
+            (and (= lastOne \{) (= two \})))
       (pop one)
-      (if (and (= lastOne \[) (= two \]))
-        (pop one)
-        (if (and (= lastOne \{) (= two \}))
-          (pop one)
-          (conj one two))))))
-;;////////////////////////////////
+      (conj one two)
+      )))
+;;////////////////////////////////                          ;;[string]
 (defn reducedStack []                                       ;;if stack = nil -> returns true as result
   (let [reduced (reduce stack [(first (processString))] (rest (processString)))]
     reduced))

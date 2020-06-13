@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e263b50-e5c7-49a7-9575-0101e71d3b06" name="Default Changelist" comment="" />
+    <list default="true" id="2e263b50-e5c7-49a7-9575-0101e71d3b06" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/matching_brackets/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/matching_brackets/core.clj" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1dADUtjhmypT1st43rvaz9YxOPW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -17,9 +24,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wonder-mouth" />
   </component>
-  <component name="ReplState" timestamp="1591906707592">{:repl-history {:ide [], :local [], :remote []}}</component>
+  <component name="ReplState" timestamp="1592030971979">{:repl-history {:ide [], :local [], :remote []}}</component>
   <component name="RunManager">
     <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
       <setting name="replType" value="NREPL" />
@@ -63,7 +70,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591859022807</updated>
-      <workItem from="1591859026306" duration="18624000" />
+      <workItem from="1591859026306" duration="19028000" />
+      <workItem from="1591957019635" duration="2783000" />
+      <workItem from="1592024072211" duration="3155000" />
     </task>
     <servers />
   </component>
@@ -75,6 +84,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591859056009" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1592024808875">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592024808875" />
     <state x="611" y="225" width="696" height="678" key="search.everywhere.popup" timestamp="1591902257295">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
